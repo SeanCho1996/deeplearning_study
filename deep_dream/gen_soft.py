@@ -9,6 +9,7 @@ import numpy as np
 import tensorflow as tf
 import scipy
 from functools import partial
+import PIL.Image
 
 k = np.float32([1, 4, 6, 4, 1])
 k = np.outer(k, k)
@@ -114,29 +115,57 @@ def tffunc(*argtypes):
     return wrap
 
 
-def render_lapnorm(t_obj, img0,
-                   iter_n=10, step=1.0, octave_n=3, octave_scale=1.4, lap_n=4):
+# def render_lapnorm(t_obj, img0,
+#                    iter_n=10, step=1.0, octave_n=3, octave_scale=1.4, lap_n=4):
+#     t_score = tf.reduce_mean(t_obj)
+#     t_grad = tf.gradients(t_score, t_input)[0]
+#     # 将lap_norm转为正常函数？？？
+#     lap_norm_func = tffunc(np.float32)(partial(lap_normalize,n=lap_n))
+#
+#     img = img0.copy()
+#     for octave in range(octave_n):
+#         if octave > 0:
+#             img = resize_ratio(img, octave_scale)
+#         for i in range(iter_n):
+#             g = cal_grad_tiled(img, t_grad)
+#             g = lap_norm_func(g)
+#             img += g*step
+#             print('.', end=' ')
+#     savearray(img, 'lapnorm.jpg')
+
+
+def render_deepdream(t_obj, img0,
+                    iter_n=10, step=1.5, octave_n=4, octave_scale=1.4, lap_n=4):
     t_score = tf.reduce_mean(t_obj)
     t_grad = tf.gradients(t_score, t_input)[0]
-    # 将lap_norm转为正常函数？？？
-    lap_norm_func = tffunc(np.float32)(partial(lap_normalize,n=lap_n))
 
     img = img0.copy()
+    octaves = []
+    for i in range(octave_n - 1):
+        hw = img.shape[:2]
+        lo = resize_ratio(img, np.int32(np.float32(hw)/octave_scale))
+        hi = img - resize_ratio(lo, hw)
+        img = lo
+        octaves.append(hi)
+
     for octave in range(octave_n):
         if octave > 0:
-            img = resize_ratio(img, octave_scale)
+            hi = octaves[-octave]
+            img = resize_ratio(img, hi.shape[:2])+hi
         for i in range(iter_n):
-            g = cal_grad_tiled(img, t_grad)
-            g = lap_norm_func(g)
-            img += g*step
+            g =  cal_grad_tiled(img, t_grad)
+            img += g*(step/(np.abs(g).mean() + 1e-7))
             print('.', end=' ')
-    savearray(img, 'lapnorm.jpg')
+    img = img.clip(0, 255)
+    savearray(img, 'deep_dream.jpg')
 
 
 if __name__ == '__main__':
-    name = 'mixed4d_3x3_bottleneck_pre_relu'
-    channel = 139
+    name = 'mixed4c'
+    # channel = 139
     layer_output = graph.get_tensor_by_name("import/%s:0" % name)
-    img_noise = np.random.uniform(size=(224, 224, 3)) + 100.0
+    #img_noise = np.random.uniform(size=(224, 224, 3)) + 100.0
+    img0 = PIL.Image.open('test.jpg')
+    img0 = np.float32(img0)
 
-    render_lapnorm(layer_output[:, :, :, channel], img_noise, iter_n=20)
+    render_deepdream(layer_output, img0, iter_n=10)
