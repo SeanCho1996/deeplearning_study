@@ -10,17 +10,19 @@ import numpy as np
 import scipy.misc
 import PIL.Image as pim
 
+
 def savearray(img_array, img_name):
     pim.fromarray(np.uint8(img_array)).save(img_name)
     print('img saved: %s' % img_name)
 
+
 def cal_grad_tiled(img, t_grad, tile_scale=512):
     sz = tile_scale
-    h, w = img.shape[:2]
+    h, w = img.shape[:2]  # 取原图的长宽
     
     # img_shift可以理解为fft_shift
     sx, sy = np.random.randint(sz, size=2)
-    img_shift = np.roll(np.roll(img, sx, 1), sy, 0)
+    img_shift = np.roll(np.roll(img, sx, 1), sy, 0)  # 随机移动一个距离
     grad = np.zeros_like(img)
     
     for y in range(0, max(h-sz//2, sz), sz):
@@ -40,7 +42,7 @@ def resize_ratio(img, ratio):
     return img
 
 
-def render_multiscale(t_obj, img0, iter_n=20, step=1.0, n=3, scale=1.5):
+def render_multiscale(t_obj, img0, iter_n=20, step=1.0, n=4, scale=1.5):
     t_score = tf.reduce_mean(t_obj)
     t_grad = tf.gradients(t_score, t_input)[0]
     
