@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c00031da-9c12-4d5d-b91e-974473a20076" name="Default Changelist" comment="" />
+    <list default="true" id="c00031da-9c12-4d5d-b91e-974473a20076" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen_multiscale.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen_multiscale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img_gene/img_c_x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img_gene/img_c_x.jpg" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,10 +15,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gen_soft.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
+            <state relative-caret-position="737">
               <caret line="170" column="33" selection-start-line="170" selection-start-column="33" selection-end-line="170" selection-end-column="33" />
               <folding>
                 <element signature="e#90#108#0" expanded="true" />
@@ -24,15 +29,13 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gen_deepdream.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1738" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/load_inception.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="-323">
               <caret line="13" selection-start-line="13" selection-end-line="15" selection-end-column="37" />
               <folding>
                 <element signature="e#90#127#0" expanded="true" />
@@ -41,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gen_multiscale.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="77" column="55" lean-forward="true" selection-start-line="74" selection-end-line="77" selection-end-column="55" />
+            <state relative-caret-position="23">
+              <caret line="30" column="31" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="31" />
               <folding>
                 <element signature="e#90#113#0" expanded="true" />
               </folding>
@@ -78,28 +81,35 @@
     <findStrings>
       <find>toim</find>
       <find>misc</find>
+      <find>oct</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test_conv2d.py" />
         <option value="$PROJECT_DIR$/load_inception.py" />
-        <option value="$PROJECT_DIR$/gen_multiscale.py" />
         <option value="$PROJECT_DIR$/gen_soft.py" />
+        <option value="$PROJECT_DIR$/gen_multiscale.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="-9" />
+    <option name="y" value="2" />
+    <option name="width" value="1933" />
+    <option name="height" value="1035" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,10 +130,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -139,7 +149,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.gen_soft">
+  <component name="RunManager" selected="Python.gen_multiscale">
     <configuration name="gen_deepdream" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="deep_dream" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -247,10 +257,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.gen_multiscale" />
         <item itemvalue="Python.gen_soft" />
         <item itemvalue="Python.gen_lapnorm" />
         <item itemvalue="Python.gen_deepdream" />
-        <item itemvalue="Python.gen_multiscale" />
         <item itemvalue="Python.load_inception" />
       </list>
     </recent_temporary>
@@ -269,16 +279,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22391017" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22339304" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.427157" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4262473" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -308,6 +318,16 @@
           <url>file://$PROJECT_DIR$/gen_soft.py</url>
           <line>65</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gen_multiscale.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gen_multiscale.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -350,16 +370,6 @@
     <entry file="file://E:/software/anaconda3/envs/tf_env/Lib/site-packages/scipy/misc/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_conv2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/software/anaconda3/envs/tf_env/Lib/site-packages/tensorflow/python/ops/nn_ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-452">
@@ -367,33 +377,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gen_multiscale.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="77" column="55" lean-forward="true" selection-start-line="74" selection-end-line="77" selection-end-column="55" />
-          <folding>
-            <element signature="e#90#113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/load_inception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" selection-start-line="13" selection-end-line="15" selection-end-column="37" />
-          <folding>
-            <element signature="e#90#127#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/naive.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/naive1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img_gene/img_c_x.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/gen_lapnorm.py">
@@ -407,17 +394,48 @@
     <entry file="file://$PROJECT_DIR$/img_ori.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/gen_deepdream.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1738" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gen_soft.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
+        <state relative-caret-position="737">
           <caret line="170" column="33" selection-start-line="170" selection-start-column="33" selection-end-line="170" selection-end-column="33" />
           <folding>
             <element signature="e#90#108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_conv2d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen_deepdream.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img_gene/img_c_x.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/load_inception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="13" selection-start-line="13" selection-end-line="15" selection-end-column="37" />
+          <folding>
+            <element signature="e#90#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen_multiscale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="31" />
+          <folding>
+            <element signature="e#90#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
